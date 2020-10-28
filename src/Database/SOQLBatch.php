@@ -46,16 +46,7 @@ class SOQLBatch extends Collection
         ];
     }
     
-    public function push(...$values)
-    {
-        foreach ($values as $value) {   
-            $this->items[] = $value;
-        }
-    
-        return $this;
-    }
-
-    /*public function push(...$builders)
+    public function push($builders)
     {
         $tempColl = null;
         foreach ($builders as $builder) {
@@ -64,7 +55,7 @@ class SOQLBatch extends Collection
             });
         }
         return $tempColl ?: $this;
-    }*/
+    }
 
     /*public function put($tag, $builder)
     {
